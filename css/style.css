@@ -1,0 +1,46 @@
+body {
+  font-weight: bold;
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+}
+
+.label {
+  margin-right: 10px;
+}
+
+.box {
+  height: 2.5rem;
+  width: 100px;
+  overflow: hidden;
+  border: 1px solid red;
+  position: relative; /* ต้องมีเพื่อให้ .slide อ้างอิงตำแหน่งได้ */
+}
+
+.slide {
+  display: flex;
+  flex-direction: column;
+  animation: slideUp 5s linear infinite;
+}
+
+
+.slide div {
+  height: 2.5rem;
+}
+
+@keyframes slideUp {
+  0%   { transform: translateY(0); }
+  25%  { transform: translateY(-2.5rem); }
+  50%  { transform: translateY(-5rem); }
+  75%  { transform: translateY(-7.5rem); }
+  100% { transform: translateY(0); }
+}
+
+
